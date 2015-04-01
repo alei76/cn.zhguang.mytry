@@ -1,0 +1,62 @@
+<taskServices>
+	<taskService>
+		<version>1.0.0.cc</version>
+		<group>CONSIGNCENTER</group>
+		<taskType>ccTask</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.whc</version>
+		<group>WHC</group>
+		<taskType>POST_CREATE_ORDER</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.whc</version>
+		<group>WHC</group>
+		<taskType>POST_CANCEL_ORDER</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.whc</version>
+		<group>WHC</group>
+		<taskType>POST_CONFIRM_INBOUND_ORDER</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.whc</version>
+		<group>WHC</group>
+		<taskType>POST_CONFIRM_OUTBOUND_ORDER</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.whc</version>
+		<group>WHC</group>
+		<taskType>POST_CONFIRM_TRADE_ORDER</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.cndcp</version>
+		<group>CNDCP</group>
+		<taskType>ESB</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.sc</version>
+		<group>SCTEST</group>
+		<taskType>TestTask</taskType>
+	</taskService>
+
+	<taskService>
+		<version>1.0.0.waybill</version>
+		<group>waybill</group>
+		<taskType>waybill_sub_push_type</taskType>
+	</taskService>
+	
+	<taskService>
+		<version>1.0.0.waybill</version>
+		<group>waybill</group>
+		<taskType>waybill_info_push_task</taskType>
+	</taskService>
+	
+</taskServices>
