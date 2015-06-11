@@ -7,7 +7,7 @@
  * 
  * Project: mytry
  * 
- * SetTest.java File Created at ÏÂÎç9:26:58
+ * SetTest.java File Created at ï¿½ï¿½ï¿½ï¿½9:26:58
  * 
  * 
  * Copyright 2014 Taobao.com Corporation Limited.
@@ -21,31 +21,47 @@
  */
 package com.taobao.yinggang.nomal.set;
 
-import java.util.Date;
 import java.util.Set;
 
 import com.google.common.collect.Sets;
+import com.taobao.util.CollectionUtil;
 
 /**
  * @author <a href="mailto:yinggang.zg@taobao.com">yinggang.zg</a>
  * @version 1.0
- * @since 2014Äê12ÔÂ19ÈÕ
+ * @since 2014ï¿½ï¿½12ï¿½ï¿½19ï¿½ï¿½
  */
 public class SetTest {
 	public static void main(String[] args) {
-		User user1 = new User("AAA", 15, new Date());
-		User user2 = new User("BBB", 20, new Date());
-		Set<User> userSet = Sets.newHashSet();
-		for (int i = 0; i < 20; i++) {
-			if (i < 10) {
-				userSet.add(user1);
-			} else {
-				userSet.add(user2);
-			}
-		}
-		System.out.println(userSet.size());
-		for (User user : userSet) {
-			System.out.println(user.toString());
-		}
+		//		User user1 = new User("AAA", 15, new Date());
+		//		User user2 = new User("BBB", 20, new Date());
+		//		Set<User> userSet = Sets.newHashSet();
+		//		for (int i = 0; i < 20; i++) {
+		//			if (i < 10) {
+		//				userSet.add(user1);
+		//			} else {
+		//				userSet.add(user2);
+		//			}
+		//		}
+		//		System.out.println(userSet.size());
+		//		for (User user : userSet) {
+		//			System.out.println(user.toString());
+		//		}
+
+		Set<String> sets = Sets.newCopyOnWriteArraySet();
+		sets.add("aa");
+		sets.add("bb");
+		sets.add("cc");
+		System.out.println(CollectionUtil.collection2String(sets, ","));
+		System.out.println(sets.contains(new String("aa")));
+		sets.remove(new String("dd"));
+		sets.remove(new String("aa"));
+		sets.add(new String("ee"));
+		sets.add(new String("ee"));
+		sets.add(new String("ee"));
+		sets.add(new String("ee"));
+
+		System.out.println(sets);
+		System.out.println(sets.contains(new String("aa")));
 	}
 }

@@ -7,7 +7,7 @@
  * 
  * Project: mytry
  * 
- * MyScheduledTask.java File Created at ÉÏÎç11:28:19
+ * MyScheduledTask.java File Created at ä¸Šåˆ11:28:19
  * 
  * 
  * Copyright 2014 Taobao.com Corporation Limited.
@@ -21,10 +21,12 @@
  */
 package com.taobao.yinggang.nomal.timer.schedule;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author <a href="mailto:yinggang.zg@taobao.com">yinggang.zg</a>
  * @version 1.0
- * @since 2014Äê7ÔÂ5ÈÕ
+ * @since 2014å¹´7æœˆ5æ—¥
  */
 public class MyScheduledTask implements Runnable {
 	private String text;
@@ -40,6 +42,12 @@ public class MyScheduledTask implements Runnable {
 	public void run() {
 		count++;
 		System.out.println("Running: " + text + " - " + count);
+		try {
+			TimeUnit.SECONDS.sleep(5);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -6,9 +6,6 @@
 
 package com.taobao.yinggang.nomal.string;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
-
 /**
  * @author egugzhg
  * @version $Revision: $
@@ -37,8 +34,15 @@ public class StringTest {
 		//		Long scdIdValue = null;
 		//		entityIdValue = Long.parseLong(entityId);
 		//		scdIdValue = Long.parseLong(scheduleId);
-		Long status = 324324932998423L;
-		System.out.println(ToStringBuilder.reflectionToString(status, ToStringStyle.SHORT_PREFIX_STYLE));
+		//		Long status = 324324932998423L;
+		//		System.out.println(ToStringBuilder.reflectionToString(status, ToStringStyle.SHORT_PREFIX_STYLE));
+		System.out.println("t".equals(null));
 
+		String obj = null;
+		if (obj instanceof String) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
 	}
 }

@@ -7,7 +7,7 @@
  * 
  * Project: mytry
  * 
- * AlterableScheduleTimer.java File Created at ÏÂÎç10:38:31
+ * AlterableScheduleTimer.java File Created at ä¸‹åˆ10:38:31
  * 
  * 
  * Copyright 2014 Taobao.com Corporation Limited.
@@ -29,11 +29,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Ö§³Ö²¢·¢µÄ¿É±äÆµÏß³Ìµ÷¶ÈÆ÷
+ * æ”¯æŒå¹¶å‘çš„å¯å˜é¢‘çº¿ç¨‹è°ƒåº¦å™¨
  * 
  * @author <a href="mailto:yinggang.zg@taobao.com">yinggang.zg</a>
  * @version 1.0
- * @since 2014Äê6ÔÂ17ÈÕ
+ * @since 2014å¹´6æœˆ17æ—¥
  */
 public class AlterableScheduleTimer {
 	private static final Logger logger = LoggerFactory.getLogger(AlterableScheduleTimer.class);
@@ -41,12 +41,12 @@ public class AlterableScheduleTimer {
 	private ScheduledExecutorService scheduleExecutor;
 
 	/**
-	 * Ïß³Ì³Ø´óĞ¡
+	 * çº¿ç¨‹æ± å¤§å°
 	 */
 	private int poolSize;
 
 	/**
-	 * ÉèÖÃÏß³Ì³Ø´óĞ¡£¬²»ÉèÖÃ»òÉèÖÃÎª0»ò1£¬ÔòÊ¹ÓÃµ¥Ïß³Ì³Ø
+	 * è®¾ç½®çº¿ç¨‹æ± å¤§å°ï¼Œä¸è®¾ç½®æˆ–è®¾ç½®ä¸º0æˆ–1ï¼Œåˆ™ä½¿ç”¨å•çº¿ç¨‹æ± 
 	 * 
 	 * @version 1.0
 	 * @param poolSize
@@ -56,7 +56,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 * 
 	 * @version 1.0
 	 */
@@ -66,7 +66,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * ³õÊ¼»¯Ïß³Ì³Ø´óĞ¡
+	 * åˆå§‹åŒ–çº¿ç¨‹æ± å¤§å°
 	 * 
 	 * @version 1.0
 	 */
@@ -79,7 +79,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * Ïú»Ùtimer
+	 * é”€æ¯timer
 	 * 
 	 * @version 1.0
 	 */
@@ -89,13 +89,13 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * °´¹Ì¶¨µÄÊ±¼äÑÓ³Ù¿ªÊ¼Ö´ĞĞµ÷¶È£¬Ã¿´ÎÖ´ĞĞÍê£¬ÑÓ³Ù¹Ì¶¨Ê±¼ä
+	 * æŒ‰å›ºå®šçš„æ—¶é—´å»¶è¿Ÿå¼€å§‹æ‰§è¡Œè°ƒåº¦ï¼Œæ¯æ¬¡æ‰§è¡Œå®Œï¼Œå»¶è¿Ÿå›ºå®šæ—¶é—´
 	 * 
 	 * @version 1.0
-	 * @param task ÈÎÎñ
-	 * @param initDelay ÆğÊ¼ÑÓ³ÙÊ±¼ä
-	 * @param delay Ã¿´ÎÖ´ĞĞÍêÒ»´Îµ÷¶ÈÖ®ºóÑÓ³ÙÊ±¼ä
-	 * @param timeUnit Ê±¼äµ¥Î»
+	 * @param task ä»»åŠ¡
+	 * @param initDelay èµ·å§‹å»¶è¿Ÿæ—¶é—´
+	 * @param delay æ¯æ¬¡æ‰§è¡Œå®Œä¸€æ¬¡è°ƒåº¦ä¹‹åå»¶è¿Ÿæ—¶é—´
+	 * @param timeUnit æ—¶é—´å•ä½
 	 */
 	public void startFixDelay(Runnable task, long initDelay, long delay, TimeUnit timeUnit) {
 		scheduleExecutor.scheduleWithFixedDelay(task, initDelay, delay, timeUnit);
@@ -104,12 +104,12 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * °´¹Ì¶¨µÄÆµÂÊ¿ªÊ¼Ö´ĞĞµ÷¶È£¬Ã¿´Î¿ªÊ¼Ö´ĞĞÖ®¼äµÄ¼ä¸ôÏàÍ¬
+	 * æŒ‰å›ºå®šçš„é¢‘ç‡å¼€å§‹æ‰§è¡Œè°ƒåº¦ï¼Œæ¯æ¬¡å¼€å§‹æ‰§è¡Œä¹‹é—´çš„é—´éš”ç›¸åŒ
 	 * 
 	 * @version 1.0
-	 * @param task ÈÎÎñ
-	 * @param initDelay ÆğÊ¼Ö´ĞĞÊ±¼ä
-	 * @param period Ã¿´ÎÖ´ĞĞÍêÒ»´Îµ÷¶ÈÖ®ºó
+	 * @param task ä»»åŠ¡
+	 * @param initDelay èµ·å§‹æ‰§è¡Œæ—¶é—´
+	 * @param period æ¯æ¬¡æ‰§è¡Œå®Œä¸€æ¬¡è°ƒåº¦ä¹‹å
 	 * @param timeUnit
 	 */
 	public void startFixRate(Runnable task, long initDelay, long period, TimeUnit timeUnit) {
@@ -119,7 +119,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * µÈ´ı×îºóÒ»´Îµ÷¶ÈÖ´ĞĞÍê³ÉºóÍ£Ö¹
+	 * ç­‰å¾…æœ€åä¸€æ¬¡è°ƒåº¦æ‰§è¡Œå®Œæˆååœæ­¢
 	 * 
 	 * @version 1.0
 	 */
@@ -129,7 +129,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * Á¢¼´Í£Ö¹
+	 * ç«‹å³åœæ­¢
 	 * 
 	 * @version 1.0
 	 */
@@ -138,7 +138,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * µÈ´ı
+	 * ç­‰å¾…
 	 * 
 	 * @version 1.0
 	 * @param timeout
@@ -151,13 +151,13 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * °´¹Ì¶¨Ê±ÑÓÖØÆô
+	 * æŒ‰å›ºå®šæ—¶å»¶é‡å¯
 	 * 
 	 * @version 1.0
 	 * @param task
 	 * @param initDelay
 	 * @param delay
-	 * @param timeout ³¬Ê±Ê±¼ä£¬µ¥Î»ÎªtimeUnit£¬³¬¹ıÕâ¸öÊ±¼äÔ­Ïß³Ì×éÈÔÈ»ÎŞ·¨¹Ø±Õ£¬ÔòÈÏÎªÆô¶¯Ê§°Ü
+	 * @param timeout è¶…æ—¶æ—¶é—´ï¼Œå•ä½ä¸ºtimeUnitï¼Œè¶…è¿‡è¿™ä¸ªæ—¶é—´åŸçº¿ç¨‹ç»„ä»ç„¶æ— æ³•å…³é—­ï¼Œåˆ™è®¤ä¸ºå¯åŠ¨å¤±è´¥
 	 * @param timeUnit
 	 * @return
 	 * @throws InterruptedException
@@ -177,7 +177,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * °´¹Ì¶¨Ê±ÑÓÖØÆô£¬Ò»Ö±µÈ´ı£¬Ã¿µÈ´ı1s£¬´òÒ»ÌõÈÕÖ¾
+	 * æŒ‰å›ºå®šæ—¶å»¶é‡å¯ï¼Œä¸€ç›´ç­‰å¾…ï¼Œæ¯ç­‰å¾…1sï¼Œæ‰“ä¸€æ¡æ—¥å¿—
 	 * 
 	 * @version 1.0
 	 * @param task
@@ -202,13 +202,13 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * °´¹Ì¶¨ÆµÂÊÖØÆô
+	 * æŒ‰å›ºå®šé¢‘ç‡é‡å¯
 	 * 
 	 * @version 1.0
 	 * @param task
 	 * @param initDelay
 	 * @param period
-	 * @param timeout ³¬Ê±Ê±¼ä£¬µ¥Î»ÎªtimeUnit£¬³¬¹ıÕâ¸öÊ±¼äÔ­Ïß³Ì×éÈÔÈ»ÎŞ·¨¹Ø±Õ£¬ÔòÈÏÎªÆô¶¯Ê§°Ü
+	 * @param timeout è¶…æ—¶æ—¶é—´ï¼Œå•ä½ä¸ºtimeUnitï¼Œè¶…è¿‡è¿™ä¸ªæ—¶é—´åŸçº¿ç¨‹ç»„ä»ç„¶æ— æ³•å…³é—­ï¼Œåˆ™è®¤ä¸ºå¯åŠ¨å¤±è´¥
 	 * @param timeUnit
 	 * @return
 	 * @throws InterruptedException
@@ -228,7 +228,7 @@ public class AlterableScheduleTimer {
 	}
 
 	/**
-	 * °´¹Ì¶¨Ê±ÑÓÖØÆô£¬Ò»Ö±µÈ´ı£¬Ã¿µÈ´ı1s£¬´òÒ»ÌõÈÕÖ¾
+	 * æŒ‰å›ºå®šæ—¶å»¶é‡å¯ï¼Œä¸€ç›´ç­‰å¾…ï¼Œæ¯ç­‰å¾…1sï¼Œæ‰“ä¸€æ¡æ—¥å¿—
 	 * 
 	 * @version 1.0
 	 * @param task
@@ -262,7 +262,7 @@ public class AlterableScheduleTimer {
 		// for (int i = 0; i < 3; i++) {
 		// singleThread.schedule(task, 1, TimeUnit.SECONDS);
 		try {
-			timer.restartFixDelay(thread, 1, 100, Integer.MAX_VALUE, TimeUnit.MILLISECONDS);
+			timer.restartFixDelay(thread, 1, 1000, Integer.MAX_VALUE, TimeUnit.MILLISECONDS);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -275,9 +275,9 @@ public class AlterableScheduleTimer {
 		// System.out.println("Change");
 		//
 		// try {
-		// System.out.println("¿ªÊ¼¹Ø±ÕÏß³Ì×é£º" + System.currentTimeMillis());
+		// System.out.println("å¼€å§‹å…³é—­çº¿ç¨‹ç»„ï¼š" + System.currentTimeMillis());
 		// timer.restartFixDelay(thread, 1, 5, Integer.MAX_VALUE, TimeUnit.SECONDS);
-		// System.out.println("ÒÑ¹Ø±ÕÖØĞÂ´ò¿ª£º" + System.currentTimeMillis());
+		// System.out.println("å·²å…³é—­é‡æ–°æ‰“å¼€ï¼š" + System.currentTimeMillis());
 		//
 		// } catch (InterruptedException e) {
 		// // TODO Auto-generated catch block
@@ -292,9 +292,9 @@ public class AlterableScheduleTimer {
 		// System.out.println("Change");
 		//
 		// try {
-		// System.out.println("¿ªÊ¼¹Ø±ÕÏß³Ì×é£º" + System.currentTimeMillis());
+		// System.out.println("å¼€å§‹å…³é—­çº¿ç¨‹ç»„ï¼š" + System.currentTimeMillis());
 		// timer.restartFixDelay(thread, 1, 3, Integer.MAX_VALUE, TimeUnit.SECONDS);
-		// System.out.println("ÒÑ¹Ø±ÕÖØĞÂ´ò¿ª£º" + System.currentTimeMillis());
+		// System.out.println("å·²å…³é—­é‡æ–°æ‰“å¼€ï¼š" + System.currentTimeMillis());
 		//
 		// } catch (InterruptedException e) {
 		// // TODO Auto-generated catch block

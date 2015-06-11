@@ -1,11 +1,5 @@
 package com.taobao.yinggang.nomal;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
-
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 
 /*
  * $HeadURL: $
@@ -72,22 +66,22 @@ public class Test {
 		// System.out.println(ZKPaths.getNodeFromPath(path1));
 		// // System.out.println(ZKPaths.getNodeFromPath(path2));
 		// System.out.println(ZKPaths.getNodeFromPath(path3));
-
-		Long[] sellerIdList = new Long[] { 9223370016456626203L, 9223370016454594727L, 9223370016454025322L, 9223370016454184206L, 9223370016457937087L,
-				9223370016453838126L, 9223370016454531368L, 9223370016454998045L };
-
-		Set<Integer> sellerIdMods = Sets.newHashSet();
-
-		for (Long sellerId : sellerIdList) {
-			sellerIdMods.add((int) (sellerId % 1024 / 8));
-		}
-
-		List<Integer> sellerIdModsSort = Lists.newArrayList();
-		sellerIdModsSort.addAll(sellerIdMods);
-		Collections.sort(sellerIdModsSort);
-		for (Integer sellerIdMod : sellerIdModsSort) {
-			System.out.println(sellerIdMod);
-
-		}
+		//
+		//		Long[] sellerIdList = new Long[] { 9223370016456626203L, 9223370016454594727L, 9223370016454025322L, 9223370016454184206L, 9223370016457937087L,
+		//				9223370016453838126L, 9223370016454531368L, 9223370016454998045L };
+		//
+		//		Set<Integer> sellerIdMods = Sets.newHashSet();
+		//
+		//		for (Long sellerId : sellerIdList) {
+		//			sellerIdMods.add((int) (sellerId % 1024 / 8));
+		//		}
+		//
+		//		List<Integer> sellerIdModsSort = Lists.newArrayList();
+		//		sellerIdModsSort.addAll(sellerIdMods);
+		//		Collections.sort(sellerIdModsSort);
+		//		for (Integer sellerIdMod : sellerIdModsSort) {
+		//			System.out.println(sellerIdMod);
+		//
+		//		}
 	}
 }
